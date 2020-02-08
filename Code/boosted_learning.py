@@ -55,7 +55,7 @@ def run_boosted_learning(x_data, y_data, data_string=""):
 
     # plot the learning curve
     title = data_string + " Boosted DTC - " + str(grid_searcher.best_params_)
-    max_estimators_range = [10, 25, 50, 100]
+    max_estimators_range = [10, 25, 50, 100, 200, 400, 800, 1200, 1600]
     figure = evaluate_model_learning_complexity.plot_learning_curve(grid_searcher.best_estimator_, title,
                                                                     x_train, y_train, parameter="n_estimators",
                                                                     param_grid=max_estimators_range, param_string="Number of Estimators",
