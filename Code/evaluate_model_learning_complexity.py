@@ -14,7 +14,7 @@ def plot_learning_curve(estimator, title, x_train, y_train, cv=None,
         learning_curve(estimator, x_train, y_train, train_sizes=train_sizes, return_times=True, n_jobs=n_jobs)
 
     # if there is another parameter, make 4 graphs, one with score against that param
-    _, axes = plt.subplots(2, 2, figsize=(20, 10))
+    _, axes = plt.subplots(1, 3, figsize=(20, 5))
 
     # if the parameter is not none, generate a validation curve based on that parameter
     if parameter is not None:
@@ -27,9 +27,9 @@ def plot_learning_curve(estimator, title, x_train, y_train, cv=None,
         valid_scores_train_mean = np.mean(valid_scores_train, axis=1)
         valid_scores_train_std = np.std(valid_scores_train, axis=1)
 
-    axes[0][0].set_title(title)
-    axes[0][0].set_xlabel("Training examples")
-    axes[0][0].set_ylabel("Score")
+    axes[0].set_title(title)
+    axes[0].set_xlabel("Training examples")
+    axes[0].set_ylabel("Score")
 
     train_scores_mean = np.mean(train_scores, axis=1)
     train_scores_std = np.std(train_scores, axis=1)
@@ -39,61 +39,61 @@ def plot_learning_curve(estimator, title, x_train, y_train, cv=None,
     fit_times_std = np.std(fit_times, axis=1)
 
     # Plot learning curve
-    axes[0][0].grid()
-    axes[0][0].fill_between(train_sizes, train_scores_mean - train_scores_std,
+    axes[0].grid()
+    axes[0].fill_between(train_sizes, train_scores_mean - train_scores_std,
                             train_scores_mean + train_scores_std, alpha=0.1,
                             color="r")
-    axes[0][0].fill_between(train_sizes, test_scores_mean - test_scores_std,
+    axes[0].fill_between(train_sizes, test_scores_mean - test_scores_std,
                             test_scores_mean + test_scores_std, alpha=0.1,
                             color="g")
-    axes[0][0].plot(train_sizes, train_scores_mean, 'o-', color="r",
+    axes[0].plot(train_sizes, train_scores_mean, 'o-', color="r",
                     label="Training Score")
-    axes[0][0].plot(train_sizes, test_scores_mean, 'o-', color="g",
+    axes[0].plot(train_sizes, test_scores_mean, 'o-', color="g",
                     label="Cross-Validation Score")
-    axes[0][0].legend(loc="best")
+    axes[0].legend(loc="best")
 
     # Plot n_samples vs fit_times
-    axes[0][1].grid()
-    axes[0][1].plot(train_sizes, fit_times_mean, 'o-')
-    axes[0][1].fill_between(train_sizes, fit_times_mean - fit_times_std,
+    axes[1].grid()
+    axes[1].plot(train_sizes, fit_times_mean, 'o-')
+    axes[1].fill_between(train_sizes, fit_times_mean - fit_times_std,
                             fit_times_mean + fit_times_std, alpha=0.1)
-    axes[0][1].set_xlabel("Training Examples")
-    axes[0][1].set_ylabel("Fit Times")
-    axes[0][1].set_title("Scalability of the Model")
+    axes[1].set_xlabel("Training Examples")
+    axes[1].set_ylabel("Fit Times")
+    axes[1].set_title("Scalability of the Model")
 
     # Plot fit_time vs score
-    axes[1][0].grid()
-    axes[1][0].plot(fit_times_mean, test_scores_mean, 'o-')
-    axes[1][0].fill_between(fit_times_mean, test_scores_mean - test_scores_std,
-                            test_scores_mean + test_scores_std, alpha=0.1)
-    axes[1][0].set_xlabel("Fit Times")
-    axes[1][0].set_ylabel("Score")
-    axes[1][0].set_title("Performance of the Model")
+    # axes[1][0].grid()
+    # axes[1][0].plot(fit_times_mean, test_scores_mean, 'o-')
+    # axes[1][0].fill_between(fit_times_mean, test_scores_mean - test_scores_std,
+                            # test_scores_mean + test_scores_std, alpha=0.1)
+    # axes[1][0].set_xlabel("Fit Times")
+    # axes[1][0].set_ylabel("Score")
+    # axes[1][0].set_title("Performance of the Model")
 
     if parameter is not None:
-        axes[1][1].grid()
-        axes[1][1].set_xlabel(param_string)
-        axes[1][1].set_ylabel("Score")
-        axes[1][1].fill_between(len(param_grid), valid_scores_train_mean - valid_scores_train_std,
+        axes[2].grid()
+        axes[2].set_xlabel(param_string)
+        axes[2].set_ylabel("Score")
+        axes[2].fill_between(len(param_grid), valid_scores_train_mean - valid_scores_train_std,
                                 valid_scores_train_mean + valid_scores_train_std, alpha=0.1,
                                 color="r")
-        axes[1][1].fill_between(len(param_grid), valid_scores_test_mean - valid_scores_test_std,
+        axes[2].fill_between(len(param_grid), valid_scores_test_mean - valid_scores_test_std,
                                 valid_scores_test_mean + valid_scores_test_std, alpha=0.1,
                                 color="g")
 
         if log_range is False:
-            axes[1][1].plot(param_grid, valid_scores_train_mean, 'o-', color="r",
+            axes[2].plot(param_grid, valid_scores_train_mean, 'o-', color="r",
                             label="Training Score")
-            axes[1][1].plot(param_grid, valid_scores_test_mean, 'o-', color="g",
+            axes[2].plot(param_grid, valid_scores_test_mean, 'o-', color="g",
                             label="Cross-Validation Score")
         else:
-            axes[1][1].semilogx(param_grid, valid_scores_train_mean, 'o-', color="r",
+            axes[2].semilogx(param_grid, valid_scores_train_mean, 'o-', color="r",
                                 label="Training Score")
-            axes[1][1].semilogx(param_grid, valid_scores_test_mean, 'o-', color="g",
+            axes[2].semilogx(param_grid, valid_scores_test_mean, 'o-', color="g",
                                 label="Cross-Validation Score")
 
-        axes[1][1].legend(loc="best")
-        axes[1][1].set_title("Model Score versus " + param_string)
+        axes[2].legend(loc="best")
+        axes[2].set_title("Model Score versus " + param_string)
 
     return plt
 
