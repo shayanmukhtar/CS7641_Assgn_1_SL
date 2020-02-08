@@ -23,8 +23,8 @@ def run_knn_learning(x_data, y_data, data_string=""):
 
     # create the grid search parameter dictionary
     paramaters = [
-        {'weights': ['uniform'],   'p': [1, 2], 'leaf_size': [20, 30, 40]},
-        {'weights': ['distance'],  'p': [1, 2], 'leaf_size': [20, 30, 40]},
+        {'weights': ['uniform'],   'p': [1, 2], 'leaf_size': [10, 20, 30, 40]},
+        {'weights': ['distance'],  'p': [1, 2], 'leaf_size': [10, 20, 30, 40]},
     ]
 
     grid_searcher = GridSearchCV(KNeighborsClassifier(n_jobs=-1), paramaters)

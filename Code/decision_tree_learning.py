@@ -23,8 +23,8 @@ def run_decision_tree(x_data, y_data, data_string=""):
 
     # create the grid search parameter dictionary
     paramaters = [
-        {'splitter': ['best'],   'min_samples_split': [2, 4, 8, 16]},
-        {'splitter': ['random'], 'min_samples_split': [2, 4, 8, 16]},
+        {'splitter': ['best'],   'min_samples_split': [2, 4, 8, 16, 32]},
+        {'splitter': ['random'], 'min_samples_split': [2, 4, 8, 16, 32]},
     ]
 
     grid_searcher = GridSearchCV(DecisionTreeClassifier(criterion="entropy"), paramaters)

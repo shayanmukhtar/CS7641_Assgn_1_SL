@@ -28,8 +28,8 @@ def neural_network_learning(x_data, y_data, data_string=""):
 
     # create the grid search parameter dictionary
     paramaters = [
-        {'solver': ['adam'], 'hidden_layer_sizes': [(16, 16), (32, 32), (64, 64)]},
-        {'solver': ['sgd'],  'hidden_layer_sizes': [(16, 16), (32, 32), (64, 64)]},
+        {'solver': ['adam'], 'hidden_layer_sizes': [(16, 16), (32, 32), (64, 64), (128, 128)]},
+        {'solver': ['sgd'],  'hidden_layer_sizes': [(16, 16), (32, 32), (64, 64), (128, 128)]},
     ]
 
     grid_searcher = GridSearchCV(MLPClassifier(), paramaters)

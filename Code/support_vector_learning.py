@@ -16,9 +16,9 @@ def run_svc_learning(x_data, y_data, data_string=""):
     # create the grid search parameter dictionary
 
     paramaters = [
-        {'kernel': ['rbf'],     'C': [1, 10, 100]},
-        {'kernel': ['sigmoid'], 'C': [1, 10, 100]},
-        {'kernel': ['poly'],    'C': [1, 10, 100]}
+        {'kernel': ['rbf'],     'C': [1, 10, 100, 1000]},
+        {'kernel': ['sigmoid'], 'C': [1, 10, 100, 1000]},
+        {'kernel': ['poly'],    'C': [1, 10, 100, 1000]}
     ]
 
     grid_searcher = GridSearchCV(svm.SVC(), paramaters)
