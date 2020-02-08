@@ -1,0 +1,317 @@
+/home/shayan/Documents/Code/venv/bin/python3.7 /home/shayan/Documents/Georgia_Tech/ML/Assignment_01/Code/generate_analysis.py
+Using TensorFlow backend.
+2020-02-08 10:59:42.808832: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer.so.6'; dlerror: libnvinfer.so.6: cannot open shared object file: No such file or directory
+2020-02-08 10:59:42.808884: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer_plugin.so.6'; dlerror: libnvinfer_plugin.so.6: cannot open shared object file: No such file or directory
+2020-02-08 10:59:42.808889: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:30] Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/preprocessing/_data.py:173: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+
+---------- Running Data on Decision Tree Learner -------------
+
+Output Classification Description of Census Data
+Element: 0.0		75.91904425539757%
+Element: 1.0		24.080955744602438%
+
+Grid Search Report
+
+Parameters                                       Mean Fit Time                                    Std Dev Fit Time                                 Split 0 Score                                    Split 1 Score                                    Split 2 Score                                    Split 3 Score                                    Split 4 Score                                    
+{'min_samples_split': 2, 'splitter': 'best'}     0.0698                                           0.0012                                           0.8081                                           0.8129                                           0.8134                                           0.8180                                           0.8088                                           
+{'min_samples_split': 4, 'splitter': 'best'}     0.0688                                           0.0018                                           0.8076                                           0.8152                                           0.8078                                           0.8139                                           0.8119                                           
+{'min_samples_split': 8, 'splitter': 'best'}     0.0676                                           0.0016                                           0.8209                                           0.8160                                           0.8203                                           0.8213                                           0.8160                                           
+{'min_samples_split': 16, 'splitter': 'best'}    0.0652                                           0.0017                                           0.8286                                           0.8254                                           0.8326                                           0.8316                                           0.8190                                           
+{'min_samples_split': 32, 'splitter': 'best'}    0.0620                                           0.0017                                           0.8375                                           0.8411                                           0.8403                                           0.8421                                           0.8298                                           
+{'min_samples_split': 2, 'splitter': 'random'}   0.0182                                           0.0008                                           0.8012                                           0.8034                                           0.8162                                           0.8060                                           0.8106                                           
+{'min_samples_split': 4, 'splitter': 'random'}   0.0177                                           0.0004                                           0.8119                                           0.8185                                           0.8134                                           0.8196                                           0.8142                                           
+{'min_samples_split': 8, 'splitter': 'random'}   0.0164                                           0.0005                                           0.8286                                           0.8170                                           0.8257                                           0.8288                                           0.8303                                           
+{'min_samples_split': 16, 'splitter': 'random'}  0.0150                                           0.0005                                           0.8347                                           0.8288                                           0.8318                                           0.8326                                           0.8336                                           
+{'min_samples_split': 32, 'splitter': 'random'}  0.0134                                           0.0006                                           0.8370                                           0.8347                                           0.8380                                           0.8467                                           0.8388                                           
+Scoring DTC with parameters: {'min_samples_split': 32, 'splitter': 'random'}	On Data: Census Data
+0.8351631477927063
+
+Output Classification Description of Stock Data
+Element: 0		52.977349595162444%
+Element: 1		47.022650404837556%
+
+Grid Search Report
+
+Parameters                                       Mean Fit Time                                    Std Dev Fit Time                                 Split 0 Score                                    Split 1 Score                                    Split 2 Score                                    Split 3 Score                                    Split 4 Score                                    
+{'min_samples_split': 2, 'splitter': 'best'}     1.4945                                           0.1348                                           0.6072                                           0.5909                                           0.5858                                           0.5909                                           0.6188                                           
+{'min_samples_split': 4, 'splitter': 'best'}     1.4772                                           0.1447                                           0.5892                                           0.5909                                           0.5944                                           0.5978                                           0.6231                                           
+{'min_samples_split': 8, 'splitter': 'best'}     1.4894                                           0.0619                                           0.6149                                           0.5867                                           0.5986                                           0.5901                                           0.6239                                           
+{'min_samples_split': 16, 'splitter': 'best'}    1.5450                                           0.2020                                           0.6063                                           0.5986                                           0.5884                                           0.5884                                           0.6068                                           
+{'min_samples_split': 32, 'splitter': 'best'}    1.4212                                           0.1244                                           0.6208                                           0.5944                                           0.5927                                           0.6003                                           0.6009                                           
+{'min_samples_split': 2, 'splitter': 'random'}   0.0979                                           0.0032                                           0.6174                                           0.6063                                           0.5679                                           0.6183                                           0.5769                                           
+{'min_samples_split': 4, 'splitter': 'random'}   0.0915                                           0.0024                                           0.6029                                           0.5713                                           0.5576                                           0.5909                                           0.5701                                           
+{'min_samples_split': 8, 'splitter': 'random'}   0.0876                                           0.0047                                           0.5918                                           0.6003                                           0.5833                                           0.5995                                           0.5795                                           
+{'min_samples_split': 16, 'splitter': 'random'}  0.0833                                           0.0044                                           0.6157                                           0.5858                                           0.6097                                           0.5969                                           0.5821                                           
+{'min_samples_split': 32, 'splitter': 'random'}  0.0717                                           0.0041                                           0.6174                                           0.6003                                           0.5833                                           0.6020                                           0.6120                                           
+Scoring DTC with parameters: {'min_samples_split': 32, 'splitter': 'random'}	On Data: Stock Data
+0.603638227004868
+
+
+---------- Running Data on Artificial Neural Network Learner -------------
+
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+Grid Search Report
+
+Parameters                                            Mean Fit Time                                         Std Dev Fit Time                                      Split 0 Score                                         Split 1 Score                                         Split 2 Score                                         Split 3 Score                                         Split 4 Score                                         
+{'hidden_layer_sizes': (16, 16), 'solver': 'adam'}    3.6781                                                1.3075                                                0.8467                                                0.8495                                                0.8413                                                0.8539                                                0.8431                                                
+{'hidden_layer_sizes': (32, 32), 'solver': 'adam'}    4.2780                                                1.3250                                                0.8470                                                0.8431                                                0.8403                                                0.8572                                                0.8490                                                
+{'hidden_layer_sizes': (64, 64), 'solver': 'adam'}    17.4212                                               7.5629                                                0.8424                                                0.8526                                                0.8436                                                0.8413                                                0.8498                                                
+{'hidden_layer_sizes': (128, 128), 'solver': 'adam'}  47.5371                                               1.0343                                                0.8408                                                0.8388                                                0.8428                                                0.8464                                                0.8405                                                
+{'hidden_layer_sizes': (16, 16), 'solver': 'sgd'}     2.5433                                                0.5981                                                0.8293                                                0.8224                                                0.8382                                                0.8206                                                0.7904                                                
+{'hidden_layer_sizes': (32, 32), 'solver': 'sgd'}     3.2347                                                0.6953                                                0.7853                                                0.8472                                                0.8042                                                0.8398                                                0.7067                                                
+{'hidden_layer_sizes': (64, 64), 'solver': 'sgd'}     10.6612                                               4.4328                                                0.8119                                                0.7981                                                0.8149                                                0.7986                                                0.8331                                                
+{'hidden_layer_sizes': (128, 128), 'solver': 'sgd'}   14.0988                                               3.9003                                                0.8401                                                0.8203                                                0.8403                                                0.8078                                                0.8170                                                
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+Scoring ANN with parameters: {'hidden_layer_sizes': (32, 32), 'solver': 'adam'}	On Data: Census Data
+0.8459117082533589
+
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+/home/shayan/Documents/Code/venv/lib/python3.7/site-packages/sklearn/neural_network/_multilayer_perceptron.py:571: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+Grid Search Report
+
+Parameters                                            Mean Fit Time                                         Std Dev Fit Time                                      Split 0 Score                                         Split 1 Score                                         Split 2 Score                                         Split 3 Score                                         Split 4 Score                                         
+{'hidden_layer_sizes': (16, 16), 'solver': 'adam'}    2.7994                                                0.0262                                                0.5816                                                0.5739                                                0.5798                                                0.5875                                                0.5838                                                
+{'hidden_layer_sizes': (32, 32), 'solver': 'adam'}    3.7450                                                0.0139                                                0.5833                                                0.5892                                                0.5576                                                0.5773                                                0.5795                                                
+{'hidden_layer_sizes': (64, 64), 'solver': 'adam'}    10.1296                                               0.3335                                                0.5798                                                0.5722                                                0.5551                                                0.5798                                                0.5829                                                
+{'hidden_layer_sizes': (128, 128), 'solver': 'adam'}  14.0627                                               1.0652                                                0.5833                                                0.6020                                                0.5594                                                0.5969                                                0.5915                                                
+{'hidden_layer_sizes': (16, 16), 'solver': 'sgd'}     2.5372                                                0.0083                                                0.5346                                                0.5414                                                0.5841                                                0.5568                                                0.5812                                                
+{'hidden_layer_sizes': (32, 32), 'solver': 'sgd'}     3.4146                                                0.0234                                                0.5542                                                0.5542                                                0.5559                                                0.5517                                                0.5427                                                
+{'hidden_layer_sizes': (64, 64), 'solver': 'sgd'}     9.4629                                                0.0331                                                0.5850                                                0.5833                                                0.5713                                                0.5833                                                0.5838                                                
+{'hidden_layer_sizes': (128, 128), 'solver': 'sgd'}   15.7869                                               0.2473                                                0.5781                                                0.5756                                                0.5918                                                0.5764                                                0.5769                                                
+Scoring ANN with parameters: {'hidden_layer_sizes': (128, 128), 'solver': 'adam'}	On Data: Stock Data
+0.5708429413271843
+
+
+---------- Running Data on Decision Tree Learner with Adaboost -------------
+
+Output Classification Description of Census Data
+Element: 0.0		75.91904425539757%
+Element: 1.0		24.080955744602438%
+
+Grid Search Report
+
+Parameters                                                              Mean Fit Time                                                           Std Dev Fit Time                                                        Split 0 Score                                                           Split 1 Score                                                           Split 2 Score                                                           Split 3 Score                                                           Split 4 Score                                                           
+{'base_estimator__max_depth': 1, 'base_estimator__splitter': 'best'}    0.3976                                                                  0.0240                                                                  0.8639                                                                  0.8574                                                                  0.8585                                                                  0.8654                                                                  0.8539                                                                  
+{'base_estimator__max_depth': 4, 'base_estimator__splitter': 'best'}    0.9771                                                                  0.0043                                                                  0.8572                                                                  0.8518                                                                  0.8582                                                                  0.8577                                                                  0.8554                                                                  
+{'base_estimator__max_depth': 8, 'base_estimator__splitter': 'best'}    1.7016                                                                  0.0098                                                                  0.8209                                                                  0.8206                                                                  0.8303                                                                  0.8190                                                                  0.8188                                                                  
+{'base_estimator__max_depth': 1, 'base_estimator__splitter': 'random'}  0.2144                                                                  0.0013                                                                  0.8490                                                                  0.8475                                                                  0.8464                                                                  0.8454                                                                  0.8431                                                                  
+{'base_estimator__max_depth': 4, 'base_estimator__splitter': 'random'}  0.3575                                                                  0.0020                                                                  0.8577                                                                  0.8539                                                                  0.8526                                                                  0.8579                                                                  0.8541                                                                  
+{'base_estimator__max_depth': 8, 'base_estimator__splitter': 'random'}  0.5498                                                                  0.0017                                                                  0.8316                                                                  0.8352                                                                  0.8426                                                                  0.8334                                                                  0.8272                                                                  
+Scoring Boosted DTC with parameters: {'base_estimator__max_depth': 1, 'base_estimator__splitter': 'best'}	On Data: Census Data
+0.8555086372360845
+
+Output Classification Description of Stock Data
+Element: 0		52.977349595162444%
+Element: 1		47.022650404837556%
+
+Grid Search Report
+
+Parameters                                                              Mean Fit Time                                                           Std Dev Fit Time                                                        Split 0 Score                                                           Split 1 Score                                                           Split 2 Score                                                           Split 3 Score                                                           Split 4 Score                                                           
+{'base_estimator__max_depth': 1, 'base_estimator__splitter': 'best'}    3.5624                                                                  0.0419                                                                  0.6413                                                                  0.6132                                                                  0.6251                                                                  0.6080                                                                  0.6436                                                                  
+{'base_estimator__max_depth': 4, 'base_estimator__splitter': 'best'}    12.9980                                                                 0.0542                                                                  0.6097                                                                  0.5944                                                                  0.5944                                                                  0.5935                                                                  0.5949                                                                  
+{'base_estimator__max_depth': 8, 'base_estimator__splitter': 'best'}    23.8894                                                                 0.1165                                                                  0.5653                                                                  0.6149                                                                  0.5568                                                                  0.5935                                                                  0.5915                                                                  
+{'base_estimator__max_depth': 1, 'base_estimator__splitter': 'random'}  0.3067                                                                  0.0010                                                                  0.5636                                                                  0.5739                                                                  0.5790                                                                  0.5798                                                                  0.5880                                                                  
+{'base_estimator__max_depth': 4, 'base_estimator__splitter': 'random'}  0.6986                                                                  0.0013                                                                  0.6097                                                                  0.6046                                                                  0.5670                                                                  0.5850                                                                  0.5923                                                                  
+{'base_estimator__max_depth': 8, 'base_estimator__splitter': 'random'}  1.2556                                                                  0.0029                                                                  0.5414                                                                  0.5816                                                                  0.5500                                                                  0.5585                                                                  0.5607                                                                  
+Scoring Boosted DTC with parameters: {'base_estimator__max_depth': 1, 'base_estimator__splitter': 'best'}	On Data: Stock Data
+0.6395080707148347
+
+
+---------- Running Data on Support Vector Learner -------------
+
+Grid Search Report
+
+Parameters                        Mean Fit Time                     Std Dev Fit Time                  Split 0 Score                     Split 1 Score                     Split 2 Score                     Split 3 Score                     Split 4 Score                     
+{'C': 1, 'kernel': 'rbf'}         3.5653                            0.0523                            0.8390                            0.8382                            0.8288                            0.8336                            0.8341                            
+{'C': 10, 'kernel': 'rbf'}        3.4190                            0.0566                            0.8483                            0.8469                            0.8413                            0.8495                            0.8454                            
+{'C': 100, 'kernel': 'rbf'}       4.2985                            0.0426                            0.8457                            0.8521                            0.8457                            0.8500                            0.8475                            
+{'C': 1000, 'kernel': 'rbf'}      10.2975                           0.2335                            0.8442                            0.8503                            0.8444                            0.8510                            0.8490                            
+{'C': 1, 'kernel': 'sigmoid'}     3.3827                            0.4820                            0.6973                            0.6883                            0.6844                            0.6964                            0.5869                            
+{'C': 10, 'kernel': 'sigmoid'}    3.3504                            0.4559                            0.6973                            0.6875                            0.6839                            0.6959                            0.5823                            
+{'C': 100, 'kernel': 'sigmoid'}   3.3767                            0.4457                            0.6973                            0.6875                            0.6839                            0.6959                            0.5820                            
+{'C': 1000, 'kernel': 'sigmoid'}  3.3391                            0.4602                            0.6973                            0.6875                            0.6839                            0.6959                            0.5820                            
+{'C': 1, 'kernel': 'poly'}        2.6117                            0.0991                            0.8375                            0.8349                            0.8285                            0.8403                            0.8326                            
+{'C': 10, 'kernel': 'poly'}       4.4400                            0.0854                            0.8447                            0.8418                            0.8364                            0.8457                            0.8449                            
+{'C': 100, 'kernel': 'poly'}      12.3526                           0.1476                            0.8470                            0.8462                            0.8405                            0.8480                            0.8485                            
+{'C': 1000, 'kernel': 'poly'}     77.6903                           4.1719                            0.8475                            0.8480                            0.8434                            0.8495                            0.8495                            
+Scoring SVM with parameters: {'C': 100, 'kernel': 'rbf'}	On Data: Census Data
+0.8446065259117083
+
+Grid Search Report
+
+Parameters                        Mean Fit Time                     Std Dev Fit Time                  Split 0 Score                     Split 1 Score                     Split 2 Score                     Split 3 Score                     Split 4 Score                     
+{'C': 1, 'kernel': 'rbf'}         5.2111                            0.0485                            0.5662                            0.5705                            0.5594                            0.5705                            0.5675                            
+{'C': 10, 'kernel': 'rbf'}        5.1572                            0.0226                            0.5628                            0.5867                            0.5807                            0.5927                            0.5863                            
+{'C': 100, 'kernel': 'rbf'}       5.5263                            0.0272                            0.5679                            0.6063                            0.5909                            0.6020                            0.5786                            
+{'C': 1000, 'kernel': 'rbf'}      8.5843                            0.2531                            0.5713                            0.5807                            0.5747                            0.5705                            0.5812                            
+{'C': 1, 'kernel': 'sigmoid'}     4.8006                            0.0629                            0.5209                            0.4987                            0.5491                            0.5329                            0.5214                            
+{'C': 10, 'kernel': 'sigmoid'}    3.4756                            0.0390                            0.5141                            0.4953                            0.5397                            0.5073                            0.5094                            
+{'C': 100, 'kernel': 'sigmoid'}   3.0130                            0.0609                            0.5098                            0.4996                            0.5423                            0.5175                            0.4991                            
+{'C': 1000, 'kernel': 'sigmoid'}  3.0143                            0.0713                            0.5278                            0.5056                            0.5363                            0.5158                            0.5111                            
+{'C': 1, 'kernel': 'poly'}        4.8674                            0.0340                            0.5354                            0.5252                            0.5312                            0.5329                            0.5265                            
+{'C': 10, 'kernel': 'poly'}       4.9163                            0.0439                            0.5397                            0.5303                            0.5346                            0.5320                            0.5299                            
+{'C': 100, 'kernel': 'poly'}      4.8577                            0.0740                            0.5440                            0.5406                            0.5465                            0.5406                            0.5342                            
+{'C': 1000, 'kernel': 'poly'}     4.9705                            0.0328                            0.5559                            0.5747                            0.5670                            0.5653                            0.5470                            
+Scoring SVM with parameters: {'C': 100, 'kernel': 'rbf'}	On Data: Stock Data
+0.5964642582628747
+
+
+---------- Running Data on KNN Learner -------------
+
+Output Classification Description of Census Data
+Element: 0.0		75.91904425539757%
+Element: 1.0		24.080955744602438%
+
+Grid Search Report
+
+Parameters                                        Mean Fit Time                                     Std Dev Fit Time                                  Split 0 Score                                     Split 1 Score                                     Split 2 Score                                     Split 3 Score                                     Split 4 Score                                     
+{'leaf_size': 10, 'p': 1, 'weights': 'uniform'}   0.0323                                            0.0101                                            0.8193                                            0.8162                                            0.8178                                            0.8167                                            0.8157                                            
+{'leaf_size': 10, 'p': 2, 'weights': 'uniform'}   0.0261                                            0.0010                                            0.8142                                            0.8132                                            0.8111                                            0.8152                                            0.8162                                            
+{'leaf_size': 20, 'p': 1, 'weights': 'uniform'}   0.0241                                            0.0006                                            0.8193                                            0.8160                                            0.8175                                            0.8167                                            0.8157                                            
+{'leaf_size': 20, 'p': 2, 'weights': 'uniform'}   0.0249                                            0.0011                                            0.8142                                            0.8132                                            0.8111                                            0.8152                                            0.8162                                            
+{'leaf_size': 30, 'p': 1, 'weights': 'uniform'}   0.0245                                            0.0009                                            0.8193                                            0.8160                                            0.8175                                            0.8167                                            0.8157                                            
+{'leaf_size': 30, 'p': 2, 'weights': 'uniform'}   0.0244                                            0.0006                                            0.8142                                            0.8132                                            0.8111                                            0.8152                                            0.8162                                            
+{'leaf_size': 40, 'p': 1, 'weights': 'uniform'}   0.0227                                            0.0006                                            0.8193                                            0.8162                                            0.8175                                            0.8167                                            0.8157                                            
+{'leaf_size': 40, 'p': 2, 'weights': 'uniform'}   0.0228                                            0.0004                                            0.8142                                            0.8132                                            0.8111                                            0.8152                                            0.8162                                            
+{'leaf_size': 10, 'p': 1, 'weights': 'distance'}  0.0266                                            0.0018                                            0.8158                                            0.8103                                            0.8111                                            0.8137                                            0.8116                                            
+{'leaf_size': 10, 'p': 2, 'weights': 'distance'}  0.0266                                            0.0008                                            0.8147                                            0.8083                                            0.8093                                            0.8132                                            0.8134                                            
+{'leaf_size': 20, 'p': 1, 'weights': 'distance'}  0.0251                                            0.0004                                            0.8158                                            0.8103                                            0.8109                                            0.8137                                            0.8116                                            
+{'leaf_size': 20, 'p': 2, 'weights': 'distance'}  0.0267                                            0.0044                                            0.8147                                            0.8083                                            0.8093                                            0.8132                                            0.8134                                            
+{'leaf_size': 30, 'p': 1, 'weights': 'distance'}  0.0245                                            0.0010                                            0.8158                                            0.8103                                            0.8109                                            0.8137                                            0.8116                                            
+{'leaf_size': 30, 'p': 2, 'weights': 'distance'}  0.0258                                            0.0010                                            0.8147                                            0.8083                                            0.8093                                            0.8132                                            0.8134                                            
+{'leaf_size': 40, 'p': 1, 'weights': 'distance'}  0.0258                                            0.0053                                            0.8158                                            0.8103                                            0.8109                                            0.8137                                            0.8116                                            
+{'leaf_size': 40, 'p': 2, 'weights': 'distance'}  0.0232                                            0.0008                                            0.8147                                            0.8083                                            0.8093                                            0.8132                                            0.8134                                            
+Scoring KNN with parameters: {'leaf_size': 10, 'p': 1, 'weights': 'uniform'}	On Data: Census Data
+0.818809980806142
+
+Output Classification Description of Stock Data
+Element: 0		52.977349595162444%
+Element: 1		47.022650404837556%
+
+Grid Search Report
+
+Parameters                                        Mean Fit Time                                     Std Dev Fit Time                                  Split 0 Score                                     Split 1 Score                                     Split 2 Score                                     Split 3 Score                                     Split 4 Score                                     
+{'leaf_size': 10, 'p': 1, 'weights': 'uniform'}   0.0696                                            0.0003                                            0.5696                                            0.5525                                            0.5559                                            0.5798                                            0.5650                                            
+{'leaf_size': 10, 'p': 2, 'weights': 'uniform'}   0.0709                                            0.0027                                            0.5542                                            0.5465                                            0.5440                                            0.5909                                            0.5581                                            
+{'leaf_size': 20, 'p': 1, 'weights': 'uniform'}   0.0623                                            0.0010                                            0.5687                                            0.5534                                            0.5559                                            0.5798                                            0.5650                                            
+{'leaf_size': 20, 'p': 2, 'weights': 'uniform'}   0.0625                                            0.0010                                            0.5551                                            0.5457                                            0.5431                                            0.5918                                            0.5598                                            
+{'leaf_size': 30, 'p': 1, 'weights': 'uniform'}   0.0654                                            0.0023                                            0.5687                                            0.5534                                            0.5559                                            0.5798                                            0.5650                                            
+{'leaf_size': 30, 'p': 2, 'weights': 'uniform'}   0.0605                                            0.0007                                            0.5551                                            0.5457                                            0.5431                                            0.5918                                            0.5598                                            
+{'leaf_size': 40, 'p': 1, 'weights': 'uniform'}   0.0528                                            0.0015                                            0.5696                                            0.5534                                            0.5542                                            0.5798                                            0.5641                                            
+{'leaf_size': 40, 'p': 2, 'weights': 'uniform'}   0.0542                                            0.0015                                            0.5551                                            0.5465                                            0.5440                                            0.5901                                            0.5590                                            
+{'leaf_size': 10, 'p': 1, 'weights': 'distance'}  0.0729                                            0.0033                                            0.5594                                            0.5517                                            0.5559                                            0.5773                                            0.5692                                            
+{'leaf_size': 10, 'p': 2, 'weights': 'distance'}  0.0704                                            0.0011                                            0.5474                                            0.5457                                            0.5440                                            0.5909                                            0.5709                                            
+{'leaf_size': 20, 'p': 1, 'weights': 'distance'}  0.0622                                            0.0029                                            0.5602                                            0.5525                                            0.5551                                            0.5773                                            0.5692                                            
+{'leaf_size': 20, 'p': 2, 'weights': 'distance'}  0.0629                                            0.0019                                            0.5482                                            0.5448                                            0.5440                                            0.5918                                            0.5726                                            
+{'leaf_size': 30, 'p': 1, 'weights': 'distance'}  0.0629                                            0.0037                                            0.5602                                            0.5525                                            0.5551                                            0.5773                                            0.5692                                            
+{'leaf_size': 30, 'p': 2, 'weights': 'distance'}  0.0620                                            0.0022                                            0.5482                                            0.5448                                            0.5440                                            0.5918                                            0.5726                                            
+{'leaf_size': 40, 'p': 1, 'weights': 'distance'}  0.0587                                            0.0050                                            0.5594                                            0.5525                                            0.5542                                            0.5773                                            0.5709                                            
+{'leaf_size': 40, 'p': 2, 'weights': 'distance'}  0.0593                                            0.0030                                            0.5482                                            0.5457                                            0.5440                                            0.5901                                            0.5718                                            
+Scoring KNN with parameters: {'leaf_size': 10, 'p': 1, 'weights': 'uniform'}	On Data: Stock Data
+0.5603382013835511
+
+Total Execution time: 2697.8500792980194s
+
+Process finished with exit code 0
