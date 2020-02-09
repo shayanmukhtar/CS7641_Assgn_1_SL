@@ -54,8 +54,8 @@ def run_knn_learning(x_data, y_data, data_string=""):
         print("".join(word.ljust(col_width) for word in row))
 
     # plot the learning curve
-    title = data_string + " DTC - " + str(grid_searcher.best_params_)
-    knn = range(3, 8, 1)
+    title = data_string + " KNN - " + str(grid_searcher.best_params_)
+    knn = range(3, 50, 7)
     figure = evaluate_model_learning_complexity.plot_learning_curve(grid_searcher.best_estimator_, title,
                                                                     x_train, y_train, parameter="n_neighbors",
                                                                     param_grid=knn, param_string="Number of Neighbors",
