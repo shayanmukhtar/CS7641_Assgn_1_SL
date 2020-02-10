@@ -62,6 +62,13 @@ def run_decision_tree(x_data, y_data, data_string=""):
                                                                     log_range=False)
 
     figure.savefig(data_string + " DTC Learning Plots")
+    print("Most Important Features Indices: ")
+    best_feature_indices = np.argsort(-grid_searcher.best_estimator_.feature_importances_)[:5]
+
+    for i in range(0, len(best_feature_indices)):
+        print("Feature Index: " + str(best_feature_indices[i]) + "\tFeature Value: " + str(grid_searcher.best_estimator_.feature_importances_[best_feature_indices[i]]))
+
+    # print(grid_searcher.best_estimator_.feature_importances_)
     score_model_test_data(x_test, y_test, grid_searcher.best_estimator_, str(grid_searcher.best_params_), data_string)
 
 
